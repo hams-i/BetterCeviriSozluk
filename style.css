@@ -1,0 +1,71 @@
+:root {
+  --primary:#141414;
+  --text-color:#e9e9e9;
+  --on:rgb(192, 83, 32);
+  --off:#b4b4b4;
+}
+
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100vw;
+  min-width: 100px;
+  height: 100vh;
+  background: var(--primary);
+  color: var(--text-color);
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.control-panel {
+  padding: 20px 5px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.control-panel .add-container, .control-panel .dark-container, .control-panel .automatic-container {
+  padding: 5px;
+}
+.control-panel .add-container p, .control-panel .dark-container p, .control-panel .automatic-container p {
+  padding-bottom: 5px;
+}
+.control-panel .add-container .add-button-container, .control-panel .add-container .dark-button-container, .control-panel .add-container .automatic-button-container, .control-panel .dark-container .add-button-container, .control-panel .dark-container .dark-button-container, .control-panel .dark-container .automatic-button-container, .control-panel .automatic-container .add-button-container, .control-panel .automatic-container .dark-button-container, .control-panel .automatic-container .automatic-button-container {
+  width: 60px;
+  border: 2px solid var(--off);
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 3px;
+  transition: 0.3s all;
+}
+.control-panel .add-container .add-button-container .add-button-circle, .control-panel .add-container .add-button-container .dark-button-circle, .control-panel .add-container .add-button-container .automatic-button-circle, .control-panel .add-container .dark-button-container .add-button-circle, .control-panel .add-container .dark-button-container .dark-button-circle, .control-panel .add-container .dark-button-container .automatic-button-circle, .control-panel .add-container .automatic-button-container .add-button-circle, .control-panel .add-container .automatic-button-container .dark-button-circle, .control-panel .add-container .automatic-button-container .automatic-button-circle, .control-panel .dark-container .add-button-container .add-button-circle, .control-panel .dark-container .add-button-container .dark-button-circle, .control-panel .dark-container .add-button-container .automatic-button-circle, .control-panel .dark-container .dark-button-container .add-button-circle, .control-panel .dark-container .dark-button-container .dark-button-circle, .control-panel .dark-container .dark-button-container .automatic-button-circle, .control-panel .dark-container .automatic-button-container .add-button-circle, .control-panel .dark-container .automatic-button-container .dark-button-circle, .control-panel .dark-container .automatic-button-container .automatic-button-circle, .control-panel .automatic-container .add-button-container .add-button-circle, .control-panel .automatic-container .add-button-container .dark-button-circle, .control-panel .automatic-container .add-button-container .automatic-button-circle, .control-panel .automatic-container .dark-button-container .add-button-circle, .control-panel .automatic-container .dark-button-container .dark-button-circle, .control-panel .automatic-container .dark-button-container .automatic-button-circle, .control-panel .automatic-container .automatic-button-container .add-button-circle, .control-panel .automatic-container .automatic-button-container .dark-button-circle, .control-panel .automatic-container .automatic-button-container .automatic-button-circle {
+  width: 20px;
+  height: 20px;
+  background: var(--off);
+  border-radius: 20px;
+  position: relative;
+}
+.control-panel .add-container .add-button-container.on, .control-panel .add-container .dark-button-container.on, .control-panel .add-container .automatic-button-container.on, .control-panel .dark-container .add-button-container.on, .control-panel .dark-container .dark-button-container.on, .control-panel .dark-container .automatic-button-container.on, .control-panel .automatic-container .add-button-container.on, .control-panel .automatic-container .dark-button-container.on, .control-panel .automatic-container .automatic-button-container.on {
+  border: 2px solid var(--on);
+}
+.control-panel .add-container .add-button-container.on .add-button-circle, .control-panel .add-container .add-button-container.on .dark-button-circle, .control-panel .add-container .add-button-container.on .automatic-button-circle, .control-panel .add-container .dark-button-container.on .add-button-circle, .control-panel .add-container .dark-button-container.on .dark-button-circle, .control-panel .add-container .dark-button-container.on .automatic-button-circle, .control-panel .add-container .automatic-button-container.on .add-button-circle, .control-panel .add-container .automatic-button-container.on .dark-button-circle, .control-panel .add-container .automatic-button-container.on .automatic-button-circle, .control-panel .dark-container .add-button-container.on .add-button-circle, .control-panel .dark-container .add-button-container.on .dark-button-circle, .control-panel .dark-container .add-button-container.on .automatic-button-circle, .control-panel .dark-container .dark-button-container.on .add-button-circle, .control-panel .dark-container .dark-button-container.on .dark-button-circle, .control-panel .dark-container .dark-button-container.on .automatic-button-circle, .control-panel .dark-container .automatic-button-container.on .add-button-circle, .control-panel .dark-container .automatic-button-container.on .dark-button-circle, .control-panel .dark-container .automatic-button-container.on .automatic-button-circle, .control-panel .automatic-container .add-button-container.on .add-button-circle, .control-panel .automatic-container .add-button-container.on .dark-button-circle, .control-panel .automatic-container .add-button-container.on .automatic-button-circle, .control-panel .automatic-container .dark-button-container.on .add-button-circle, .control-panel .automatic-container .dark-button-container.on .dark-button-circle, .control-panel .automatic-container .dark-button-container.on .automatic-button-circle, .control-panel .automatic-container .automatic-button-container.on .add-button-circle, .control-panel .automatic-container .automatic-button-container.on .dark-button-circle, .control-panel .automatic-container .automatic-button-container.on .automatic-button-circle {
+  background: var(--on);
+  left: 30px;
+}
+
+.reset-button {
+  cursor: pointer;
+  background-color: red;
+  padding: 5px;
+  border-radius: 10px;
+  z-index: 555;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}/*# sourceMappingURL=style.css.map */

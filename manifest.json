@@ -1,0 +1,36 @@
+{
+    "name":"Better Çeviri Sözlük",
+    "description":"Çeviri Sözlük is more beautiful now.",
+    "version":"1.0.0",
+    "author": {
+        "name": "Hamsi",
+        "email": "mail@zodiacdesignn.tk",
+        "url": "https://www.zodiacdesignn.tk/"
+    },
+    "homepage_url": "https://github.com/hams-i/BetterCeviriSozluk",
+    "manifest_version":3,
+    "icons": {
+        "48": "48.png",
+        "128": "128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["activeTab"],
+    "host_permissions": [ "https://cevirsozluk.com/*" ],
+    "content_scripts":[
+        {
+           "matches":[
+              "https://cevirsozluk.com/*",
+              "https://cevirsozluk.com/*"
+           ],
+           "js": ["content_script.js","app.js"],
+           "run_at": "document_idle"
+        }
+    ],
+    "action":{
+        "default_title":"Better Çeviri Sözlük",
+        "default_icon":"128.png",
+        "default_popup":"app.html"
+    }
+}

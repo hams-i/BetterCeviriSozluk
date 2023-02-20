@@ -1,0 +1,66 @@
+:root{
+    --primary:#141414;
+    --text-color:#e9e9e9;
+    --on:rgb(192, 83, 32);
+    --off:#b4b4b4;
+}
+*{
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100vw;
+    min-width:100px;
+    height: 100vh;
+    background: var(--primary);
+    color:var(--text-color);
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.control-panel{
+    padding: 20px 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .add-container, .dark-container, .automatic-container{
+        padding: 5px;
+        p{
+            padding-bottom: 5px;
+        }
+        .add-button-container, .dark-button-container, .automatic-button-container{
+            width: 60px;
+            border: 2px solid var(--off);
+            border-radius: 30px;
+            cursor: pointer;
+            padding: 3px;
+            transition: .3s all;
+            .add-button-circle, .dark-button-circle, .automatic-button-circle{
+                width: 20px;
+                height: 20px;
+                background: var(--off);
+                border-radius: 20px;
+                position: relative;
+            }
+            &.on{
+                border: 2px solid var(--on);
+                .add-button-circle, .dark-button-circle, .automatic-button-circle{
+                    background: var(--on);
+                    left: 30px;
+                }
+            }
+        }
+    }
+}
+
+.reset-button{
+    cursor: pointer;
+    background-color: red;
+    padding: 5px;
+    border-radius: 10px;
+    z-index: 555;
+    position: absolute;
+    right: 5px;
+    top:5px;
+}
